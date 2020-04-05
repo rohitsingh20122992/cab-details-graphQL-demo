@@ -1,0 +1,15 @@
+type Query {
+  cabById(id: ID): Cab
+}
+
+type Cab {
+  id: ID
+  carNumber: String
+  driver: Driver
+}
+
+type Driver {
+  id: ID
+  firstName: String
+  lastName: String
+}
