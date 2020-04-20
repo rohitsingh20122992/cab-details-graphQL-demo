@@ -51,7 +51,7 @@ public class GraphQLDataFetchers {
     public DataFetcher setDriverDataFetcher() {
         return dataFetchingEnvironment -> {
             String carId = dataFetchingEnvironment.getArgument("id");
-            String firstName = dataFetchingEnvironment.getArgument("driver");
+            String firstName = dataFetchingEnvironment.getArgument("firstName");
             String lastName = dataFetchingEnvironment.getArgument("lastName");
             Map<String, String> driverDetails = new HashMap<>();
             driverDetails.put("firstName", firstName);
