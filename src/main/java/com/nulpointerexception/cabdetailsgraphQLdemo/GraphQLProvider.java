@@ -48,6 +48,8 @@ public class GraphQLProvider {
                         .dataFetcher("cabById", graphQLDataFetchers.getCabByIdDateFetcher()))
                 .type(TypeRuntimeWiring.newTypeWiring("Cab")
                         .dataFetcher("driver", graphQLDataFetchers.getDriverDataFetcher()))
+                .type(TypeRuntimeWiring.newTypeWiring("Mutation")
+                        .dataFetcher("createDriver", graphQLDataFetchers.setDriverDataFetcher()))
                 .build();
     }
 }

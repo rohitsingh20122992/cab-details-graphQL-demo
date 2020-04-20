@@ -2,9 +2,14 @@ type Query {
   cabById(id: ID): Cab
 }
 
+type Mutation {
+  createDriver(id: ID!, firstName: String!, lastName: String!): Driver!
+}
+
 type Cab {
   id: ID
   carNumber: String
+  carModel: String
   driver: Driver
 }
 
